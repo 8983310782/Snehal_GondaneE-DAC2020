@@ -1,0 +1,51 @@
+use dbms;
+
+create table Member1(M_id int(05),
+					M_name varchar(30),
+                    M_address varchar(50),
+                    Acc_Open_Date date,
+                    Membership_Type varchar(20),
+                    Penality_Amount int(07));
+                    
+create table Books1(Book_No int(06),
+					B_Name varchar(30),
+                    Author_name varchar(30),
+                    Cost int(07),
+                    Category Char(10));
+
+create table Issue1(Lib_Issue_Id int(10),
+					Book_No int(06),
+                    Member_id int (05),
+                    Issue_Date date,
+                    Return_Date date);
+DESCRIBE Books1;
+desc Issue1;
+desc Member1;
+
+ALTER TABLE Member1 DROP COLUMN Penality_Amount;
+desc Member1;
+INSERT INTO Member1 VALUES(1,'Richa Sharma','Pune','1999-11-07','Lifetime')
+							,(2,'Garima Sen','Pune','1998-09-02','Annual')
+                            ,(3,'Snehal','Nagpur','2002-07-22','Lifetime')
+                            ,(4,'Chaitu','Nagpur','2001-06-03','Annual')
+                            ,(5,'Panna','Mumbai','1997-12-23','Lifetime');
+INSERT INTO Books1 VALUES(101,'Let us C','Kanatkar',450,'System')
+							,(102,'Oracle','Loni',550,'Database')
+                            ,(103,'Mastering SQL','Loni',250,'Database')
+                            ,(104,'PL SQL','Scott Uttam',750,'Database')
+                            ,(105,'DBMS','XYZ',990,'Query');
+                            
+SELECT * FROM Books1;
+
+UPDATE Books1 SET Cost =100 WHERE Book_No =103;
+
+
+DROP TABLE Issue1;
+CREATE TABLE Issue8(Lib_Issue_id int(10),Book_No int(6),M_id int (5),Issue_Date Date);
+
+INSERT INTO Issue8 VALUES(7001,101,1,'1999-03-10','    ');
+INSERT INTO Issue8 VALUES(7002,102,2,'2025-11-05','    ');
+INSERT INTO Issue8 VALUES(7003,104,1,'2006-11-06','    ');
+INSERT INTO Issue8 VALUES(7004,101,2,'2006-12-21','    ');
+INSERT INTO Issue8 VALUES(7005,104,3,'1996-12-07');
+INSERT INTO Issue8 VALUES(7006,108,2,"");
