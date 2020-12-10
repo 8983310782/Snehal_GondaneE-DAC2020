@@ -1,0 +1,95 @@
+use edac;
+Create table EMP ( EMPNO numeric(4) not null, ENAME varchar(30) not null, JOB varchar(10), MGR numeric(4), HIREDATE date, SAL numeric(7,2), DEPTNO numeric(2) ); 
+Insert into EMP (EMPNO ,ENAME, JOB, MGR, HIREDATE, SAL, DEPTNO) values(1000,  'Manish' , 'SALESMAN', 1003,  '2020-02-18', 600,  30) ;
+Insert into EMP (EMPNO ,ENAME, JOB, MGR, HIREDATE, SAL, DEPTNO ) values(1001,  'Manoj' , 'SALESMAN', 1003,  '2018-02-18', 600,  30) ;
+Insert into EMP (EMPNO ,ENAME, JOB, MGR, HIREDATE, SAL, DEPTNO ) values(1002 , 'Ashish', 'SALESMAN',1003 , '2013-02-18',  750,  30 );
+Insert into EMP (EMPNO ,ENAME, JOB, MGR, HIREDATE, SAL, DEPTNO ) values(1004,  'Rekha', 'ANALYST', 1006 , '2001-02-18', 3000,  10);
+Insert into EMP (EMPNO ,ENAME, JOB, MGR, HIREDATE, SAL, DEPTNO ) values(1005 , 'Sachin', 'ANALYST', 1006 ,  '2019-02-18', 3000, 10 );
+Insert into EMP (EMPNO ,ENAME, JOB, MGR, HIREDATE, SAL, DEPTNO ) values(1006,  'Pooja',  'MANAGER'  ,     null    , '2000-02-18' ,6000, 10 );
+
+Create table dept (dno numeric(4) not null, dname varchar(10) not null,area varchar(30));
+Insert into dept(dno,dname,area) values(10,'Store','Mumbai');
+Insert into dept(dno,dname,area) values(20,'Purchase','Mumbai');
+Insert into dept(dno,dname,area) values(30,'Store', 'Delhi');
+Insert into dept(dno,dname,area) values(40,'Marketing','Pune');
+Insert into dept(dno,dname,area) values(50,'Finance','Delhi');
+Insert into dept(dno,dname,area) values(60,'Accounts','Mumbai');
+
+DELIMITER $$
+CREATE procedure SP2(IN A INT,IN B INT)
+BEGIN
+select A+B;
+select A-B;
+select A*B;
+select A/B;
+END $$
+
+CALL SP2(10,20);
+
+DELIMITER $$
+create procedure SP3(INOUT STR VARCHAR(30))
+BEGIN
+SET STR =(SELECT REVERSE(STR));
+END $$
+SET @STR='DATABASE';
+CALL SP3(@STR);
+SELECT @STR AS REV;
+
+DELIMETER $$
+CREATE procedure SP4()
+BEGIN
+SELECT EMPNO , EMPNAME, SAL FROM EMP ORDER BY SAL DESC LIMIT 5;
+ END $$
+ CALL SP4;
+
+DELIMITER $$
+CREATE PROCEDURE SP5()
+BEGIN
+create table EMP_TEST (EMP_ID INT, ENAME varchar(10),EJOINIG_DATE DATE);
+
+END$$
+CALL SP5;
+DROP PROCEDURE SP5;
+
+
+DELIMITER $$
+CREATE PROCEDURE SP(INOUT NUM INT, OUT SQR INT,OUT CUBE1 INT)
+BEGIN
+DECLARE NUM1 INT;
+SET NUM1=NUM;
+SELECT NUM,POWER(NUM,2),POWER(NUM,3) INTO NUM,SQR,CUBE1;
+
+END $$
+SET @NUM=3;
+CALL SP(@NUM,@SQR,@CUBE1);
+SELECT @NUM,@SQR,@CUBE1;
+
+
+delimiter $$
+ create procedure sp6()
+ begin 
+ insert into dept(dno,dname,area)values(60,'education','pune');
+end $$
+select * from dept;
+
+delimiter $$
+CREATE PROCEDURE SP7(OUT ANS INT)
+BEGIN
+DECLARE NUM int;
+SET NUM=2;
+SELECT NUM  INTO ANS ;
+END $$
+DROP PROCEDURE SP7;
+
+CALL SP7(@ANS);
+SELECT @ANS;
+
+
+delimiter $$
+CREATE PROCEDURE SP8(IN X INT,OUT STR VARCHAR(50))
+BEGIN
+SELECT concat(E.ENAME,' IS FROM ',D.DNAME) INTO STR  FROM EMP E INNER JOIN DEPT D ON D.DNO=E.DEPTNO WHERE E.DEPTNO=X AND E.EMPNO=1004;
+END $$
+
+CALL SP8(10,@STR);
+SELECT @STR;
