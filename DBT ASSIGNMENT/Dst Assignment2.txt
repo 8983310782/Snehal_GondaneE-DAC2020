@@ -1,0 +1,84 @@
+use dbms;
+
+CREATE TABLE  publisher(pname varchar(20),phone int(10),email varchar(30));
+CREATE TABLE authors(aname varchar(20),phone int(10));
+create table titles(titleid int(10),title varchar(30),pubdate date);
+create table titleauthors(auid int(10),titleid int(10),importance varchar(30));
+insert into publisher values('snehal',67892356,'snehal@gmail.com'),('chaitu',8765432,'chaitu@gmail.com')
+							,('snehal',76543,'snhu672gmail.com'),('shashank',6754321,'edac34@gmail.com')
+                            ,('surbhi',765532,'gfth542gmail.com'),('heashill',5566272,'sdsd@gmail.com')
+                            ,('anshu',6765689,'sdfgy@gmail.com');
+create table subject(subid int(10),name varchar(20));
+insert into subject values(001,'OOPs'),(002,'Java'),(003,'Oracle'),(004,'DBMS');
+SELECT name= "ORACLE" FROM subject;
+SELECT * FROM subject WHERE name LIKE 'j%';
+SELECT * FROM subject WHERE name LIKE '%MS%';
+insert into authors values('raju',98866456),('rajashri',26738828),('snehal',987345211),('sher',65367221);
+SELECT * FROM authors WHERE aname LIKE '%er';
+SELECT * FROM publisher WHERE pname LIKE '%hill';
+SELECT * FROM publisher WHERE pname LIKE 's__%';
+create table titles1(title_id int(10),title_name varchar(30),price int(40));
+insert into titles1 values(0432,'System oops',786),(2367,'RDMS',390),(101,"JAVA",1200),(0642,'APTITUDE',2000);
+select * from titles1 WHERE price < 500;
+SELECT * FROM subject WHERE name='Java' OR name='Dbms';
+ALTER TABLE authors ADD author_id int(40) NOT NULL AFTER phone;
+INSERT INTO authors(author_id) values(892);
+INSERT INTO authors(author_id) values(200);
+INSERT INTO authors(author_id) values(100);
+INSERT INTO authors(author_id) values(80);
+desc authors;
+select * from authors;
+select * from authors WHERE author_id > 130;
+SELECT * FROM titles1 WHERE title_id='101' OR price > 400;
+SELECT * FROM publisher WHERE pname IN ('anshu','shashank');
+SELECT MAX(Price) FROM titles1;
+SELECT AVG(Price) FROM titles1;
+SELECT COUNT(title_id) FROM titles1;
+SELECT SUM(Price) FROM titles1;
+SELECT title_name FROM titles1 WHERE Price = 2000;
+SELECT YEAR(CURDATE());
+SELECT MONTH(CURDATE());
+
+create table employee5 (emp_id int(04),emp_name varchar (30));
+alter table employee5 add column dept_id int(10);
+desc employee5;
+ALTER TABLE employee5 MODIFY emp_name CHAR(10); 
+ALTER TABLE employee5 RENAME TO Scot; 
+truncate table scot;
+
+ALTER TABLE employee5 ADD sal float(7,3);
+insert into employee5  values (12,'snehal',2345.432);
+insert into employee5  values (12,'snehal',578.3432);
+insert into employee5  values (11,'snehu',2345.22);
+desc employee5;
+select * from employee5;
+-- -----------------------------------------------------------------
+SELECT SQRT(7);
+SELECT FLOOR(2565.715);
+SELECT CEIL(267.715);
+SELECT CEIL(25.95);
+SELECT MOD(21, 4);
+SELECT MOD(225, 25);
+SELECT POWER(2, 2);
+SELECT POWER(12, 4);
+SELECT SIGN(255.5);
+SELECT TRUNCATE(135.37576, 2);
+SELECT SIGN(-15.98);
+SELECT emp_name, sal, ROUND(sal, 1) AS Roundedsal FROM employee5;
+-- --------------------------------STRING--------------------------
+SELECT CONCAT("SQL ", "is ", "Language") AS ConcatenatedString;
+SELECT CONCAT("CDAC   ", "JUHU ") AS ConcatenatedString;
+SELECT LCASE("CDAC JUHU");
+SELECT REVERSE("CDAC JUHU");
+SELECT REPLACE("CDAC JUHU", "JUHU", "MUMBAI");
+SELECT SUBSTR("CDAC JUHU", 4, 5) AS ExtractString;
+
+-- ---------------DATE---------------------------------
+
+SELECT current_date() AS DATE;
+SELECT date_format(current_date(),'%d-%m-%y') as DATE;
+SELECT date_format(current_date(),'%W-%D-%M-%Y') as DATE;
+SELECT date_format(current_date(),'%W-%d-%b-%Y') as DATE;
+
+
+
