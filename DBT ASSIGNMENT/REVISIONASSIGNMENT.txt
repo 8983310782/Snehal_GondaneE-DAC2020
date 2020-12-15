@@ -1,0 +1,25 @@
+use dbms;
+create table employeedetails(emp_id int(10),Fullname varchar(20)
+                             ,Managerid int(10),DateOfJoining date
+                             ,City varchar(20));
+insert into employeedetails values(121,'John Snow',321,'2014-01-31','Toronato')
+									,(321,'Walter White',986,'2015-01-30',"California")
+                                    ,(421,"Kuldeep Rana",876,'2016-11-27',"New Delhi");
+create table employeesalary(empid int(07),project varchar(10),salaray int(30),variable int(20));
+insert into employeesalary values(121,'P1',8000,500),(321,'P2',10000,1000),(421,'P3',12000,0);
+select   employeedetails.emp_id,employeedetails.Fullname from employeedetails where Managerid=986;
+select project from employeesalary;
+select count(variable) from employeesalary where project='P1'; 
+SELECT AVG(salaray) FROM employeesalary;
+SELECT AVG(salaray) FROM employeesalary WHERE project='P3';
+SELECT MAX(SALARAY) FROM EMPLOYEESALARY ;
+SELECT MIN(SALARAY) FROM EMPLOYEESALARY ;
+SELECT MAX(SALARAY) FROM EMPLOYEESALARY WHERE VARIABLE=1000;
+SELECT  empid FROM employeesalary GROUP BY empid HAVING count(salaray )< 8000;
+SELECT empid, Salaray FROM employeesalary WHERE SALARAY BETWEEN 9000 AND 15000;
+SELECT EMP_ID,FULLNAME,DATEOFJOINING FROM EMPLOYEEDETAILS where MANAGERID='121' OR CITY='TORONATO';
+
+SELECT EMP_ID,FULLNAME,DATEOFJOINING FROM EMPLOYEEDETAILS where MANAGERID='321' OR CITY='CALIFORNIA';
+SELECT EMPID FROM EMPLOYEESALARY  WHERE NOT PROJECT='P1';
+SELECT EMPID, Salaray + Variable as total from employeesalary;
+select fullname from employeedetails where fullname LIKE '__hn%';
