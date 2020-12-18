@@ -64,11 +64,11 @@ salary int
 );
 
 insert into emp3 
-values(111,"Somnath","Narote",25000),
-      (107,"Shubhangi","Tarte",10000),
-      (108,"Shweta","Behere",19000),
-      (089,"Shreyas","Jadhav",25000),
-      (110,"Snehal","Shinde",20000);
+values(121,"Snehal","Gondane",25009),
+      (104,"Shubhangi","Tarte",1800),
+      (178,"Shweta","Behere",1900),
+      (189,"Snehu","gondane",2500),
+      (118,"Snehal","Shinde",20080);
 -- drop table emp3;
 
 delimiter $$
@@ -149,11 +149,11 @@ ename varchar(20),
 salary int
 );
 insert into emp2 
-values(101,'Somnath',20000),
-      (102,'Shubhangi',50000),
-      (103,'shreyas',70000),
-      (104,'Shrushti',30000),
-      (105,'Sneha',100000);
+values(101,'Snehal',2008),
+      (102,'Shubhangi',500),
+      (103,'shahank',700),
+      (104,'Snehu',300),
+      (105,'Sneha',1000);
       
 delimiter $$
 create procedure my_cursor_5()
