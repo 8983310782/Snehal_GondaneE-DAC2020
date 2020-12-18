@@ -162,7 +162,7 @@ declare id int;
 declare e_name varchar(20);
 declare sal int;
 declare finished int default 0;
-declare del_cursor cursor for select * from emp2 where salary<100000;
+declare del_cursor cursor for select * from emp2 where salary<700;
 declare continue handler  for not  found set finished=1;
 open del_cursor;
 repeat
