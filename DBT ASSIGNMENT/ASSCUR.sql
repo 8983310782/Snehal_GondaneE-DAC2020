@@ -133,8 +133,8 @@ declare exit handler for not found set finished =1;
 open show_cursor_data;
 test_loop:repeat
 fetch show_cursor_data into e_id,f_name,l_name,sal;
-if f_name='Somnath' then
-select * from emp3 where fname='Somnath';
+if f_name='Snehu' then
+select * from emp3 where fname='Snehu';
 end if;
 until finished
 end repeat;
