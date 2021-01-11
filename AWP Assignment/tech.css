@@ -1,0 +1,391 @@
+
+
+.navbar-brand img{
+  height: 75px;
+}
+
+.nav-item.nav-link{
+  color: white !important;
+}
+
+.navbar-toggler{
+  border-color: white;
+}
+
+#about{
+  width: 50vw;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 85px;
+  color: #484848;
+}
+
+#techgyan{
+  color: #ed1c24; 
+}
+
+#sb-image{
+  width: 40vw;
+  max-width: 350px;
+  min-width: 305px;
+  margin: 10px;
+  border-radius: 25px;
+}
+
+.about-content{
+  display: inline;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #484848;
+  line-height: 1.41;
+  padding: 20px;
+  margin: 10px;
+}
+
+#division-1{
+  text-align: center;
+  box-shadow: 5px 3px 6px 0;
+  background-color: #ed1c24;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-top-right-radius: 50px;
+  padding: 20px;
+}
+
+#division-1 h1{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  line-height: 50px;
+  font-size: 1.5rem;
+}
+
+.progress-container{
+  height: 1600px;
+    width: 3px;
+    border: 4px solid red;
+    z-index: -1;
+    position: absolute;
+    margin-left: 15vw;
+    margin-right: 0;
+    display: inline-block;
+    margin-top: 20px;
+    background-color: red; 
+}
+
+#progress-image{
+ 
+  z-index: 2;
+  top:500px;
+ /* -ms-transform: rotate(90deg); IE 9 
+    -webkit-transform: rotate(90deg); /* Safari 3-8 
+     position: sticky;*/
+    transform: rotate(90deg);
+    width: 8vw;
+    margin-left: 11vw;
+}
+
+.benefits h3{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 2;
+  margin-left: 10vw;
+  margin-bottom: 10px;
+  display: inline;
+}
+
+.list-star{
+  width: 20px;
+}
+
+.benefits li{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight:600;
+  line-height: 2;
+  margin-left: 30vw;
+  list-style: none;
+}
+
+.benefits h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2;
+  margin-left: 30vw;
+}
+
+.benefits p{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight:600;
+  line-height: 2;
+  margin-left: 30vw;
+  display: inline-block;
+}
+
+.package-card{
+  margin-bottom: 50px;
+}
+
+.image-bkg{
+  background-color: white;
+  /*width: 22vw;*/
+  display: inline-block;
+  border-radius: 20px;
+  box-shadow: 0 5px 6px 0;  
+  margin-left:10vw;
+}
+
+.package-image{
+  /*margin-left: 10vw;*/
+  margin-top: 15px;
+  width: 10vw;
+  min-width: 100px;
+  display: inline;
+}
+
+.package-title{
+  display: block;
+}
+
+.package-content{
+  display: inline;
+  margin-top: 0;
+}
+
+
+@media only screen and (min-width: 768px) {
+  #sb-image{
+    float: right;
+  }
+
+  .workshop-image{
+    float: left;
+  }
+}
+
+#division-2{
+  width: 100%;
+  text-align: center;
+  box-shadow: 5px 3px 6px 0;
+  background-color: #ed1c24;
+  margin-top: 20px;
+  border-top-right-radius: 50px;
+  padding: 20px;
+}
+
+#division-2 h1{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  line-height: 50px;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+#division-2 h2{
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 20px;
+  font-weight: 600;
+  line-height: 50px;
+  /*margin-bottom: 25px;*/
+}
+
+#division-2 h3{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  line-height: 20px;
+  font-size: 1rem;
+}
+
+.head-cards{
+  width: 50%;
+}
+
+.dark{
+  background-color: #223f40;
+  color: white;
+  border-radius: 10px;
+}
+
+.dark .workshop-title{
+  color: white;
+}
+
+.dark .workshop-info{
+  color: white;
+}
+
+#workshops h1{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  line-height: 50px;
+  font-size: 1.5rem;
+  color: #484848;
+  background-color: #f8f8f8;
+}
+
+#workshops h1 span{
+  font-weight: 800;
+}
+
+
+.workshop-image{
+  width: 20vw;
+  /*My preference*/
+  border-radius: 5px;
+  min-width: 170px;
+  margin: 15px;
+  margin-left: 0; 
+  background-color: white;
+}
+
+.workshop-title{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  line-height: 50px;
+  font-size: 0.9rem;
+  color: #484848;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.workshop-info{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #484848;
+  padding: 10px;
+  padding-top: 0;
+}
+
+.carousel-item img{
+  width: 150px;
+}
+
+#past-events h1{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  line-height: 50px;
+  font-size: 1.5rem;
+  color: #484848;
+  background-color: #f8f8f8;
+}
+
+.carousel-image{
+  width: 25vw;
+  margin: auto;
+}
+
+.carousel-control-prev{
+  background-color: red;
+}
+
+.carousel-control-next{
+  background-color: red;
+}
+
+.footer{
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/*create vertical rule*/
+@media only screen and (max-width: 576px){
+  .vertical{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 992px){
+  .vertical{
+    left: 50%;
+  }
+}
+
+@media only screen and (max-width: 992px){
+  .vertical{
+    left: 50%;
+  }
+}
+
+.vertical{
+  border-left: 2px solid #ebebeb;
+    height: 350px;
+    position: absolute;
+    margin-top: 2vw;
+}
+#registration-form{
+  width: 50%;
+}
+
+#registration-form input{
+  border-radius: 5px;
+}
+
+#footer-form p{
+  margin-top: 15%;
+   font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+#register-button{
+  margin-top: 5%;
+   background-color: white;
+   border-radius: 20px;
+   font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+
+}
+
+.input{
+  margin: 5px;
+}
+
+input{
+  float: right;
+  border-radius: 25px;
+}
+
+.footer hr{
+  border: 1px solid white;
+}
+
+@media only screen and (max-width: 395px){
+  #footer-contacts{
+    margin-top: 25px;
+  }
+}
+
+@media only screen and (max-width: 376px){
+  #map-dummy{
+    display:none;
+  }
+}
+
+#map-dummy{ 
+  width: 30vw;
+}
+
+.red{
+  background-color: #ed1c24;
+  color: #fffcf7 !important;
+}
+
+.clear{
+  clear: both;
+}
+
+.center{
+  text-align: center;
+ }
+
+ .right{
+  text-align: right;
+ }
